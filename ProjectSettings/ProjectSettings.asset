@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: a8a683f2163cd8a488932459ac112add
+  productGUID: 566ea814618e20f498f32140a885a3b0
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -84,6 +84,7 @@ PlayerSettings:
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
+  audioSpatialExperience: 0
   deferSystemGesturesMode: 0
   hideHomeButton: 0
   submitAnalytics: 1
@@ -706,10 +707,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: e1974844-7dae-42d0-9708-b605e18e2220
+  cloudProjectId: 40deab20-53a5-461d-8b3c-9d81ff0fee79
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: CultureJamAustria2024
+  projectName: CultureJamAustria2024 2024-11-15_01-06-58
   organizationId: cyranixon
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
