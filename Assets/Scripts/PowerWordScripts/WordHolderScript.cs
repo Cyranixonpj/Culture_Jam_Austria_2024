@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
+using DG.Tweening;
 
 public class WordHolder: MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class WordHolder: MonoBehaviour
     private Vector3 showPosition = new Vector3(200, 0, 0);
     private bool _isHidden = true;
     public bool _canChangeHiddenStatus = true;
+    [SerializeField] RectTransform _rectTransform; 
+    [SerializeField] float leftPosX ,middlePOoX;
+    [SerializeField] private float tweenDuration;
     
     private void NotifyPowerWordListChangePerformed()
     {
@@ -58,12 +62,12 @@ public class WordHolder: MonoBehaviour
     }
     public void ShowJournal()
     {
-        transform.position = Vector3.Lerp(transform.position, showPosition, (Time.deltaTime));
+        _rectTransform.DOAnchorPosX(middlePOoX, tweenDuration);
         _isHidden = false;
     }
     public void HideJournal()
     {
-        transform.position = Vector3.Lerp(transform.position, hiddenPosition, (Time.deltaTime));
+        _rectTransform.DOAnchorPosX(leftPosX, tweenDuration);
         _isHidden = true;
     }
 }

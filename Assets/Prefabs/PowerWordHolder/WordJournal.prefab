@@ -107,3 +107,7 @@ MonoBehaviour:
   currIndex: 0
   collectedWords: []
   _canChangeHiddenStatus: 1
+  _rectTransform: {fileID: 3990453082979754661}
+  leftPosX: -200
+  middlePOoX: 200
+  tweenDuration: 1
