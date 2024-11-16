@@ -17,4 +17,4 @@ MonoBehaviour:
   - aaaaaaaa
   - aaaaaaaaaa
   - aaaaaaaaa
-  GivenWord: 
+  GivenWord: {fileID: 11400000, guid: dcc0696376b7ec546a034699d8e81e97, type: 2}

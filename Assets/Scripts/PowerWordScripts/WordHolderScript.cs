@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class WordHolder: MonoBehaviour
 {
@@ -11,14 +12,14 @@ public class WordHolder: MonoBehaviour
     public int currIndex;
     public List<WordInfo> collectedWords;
     public event Action PowerWordListChangePerformed;
-    private Vector3 hiddenPosition = new Vector3(-200,0,0);
-    private Vector3 showPosition = new Vector3(200, 0, 0);
     private bool _isHidden = true;
     public bool _canChangeHiddenStatus = true;
+    public bool _isInSelectionMode = false;
     [SerializeField] RectTransform _rectTransform; 
     [SerializeField] float leftPosX ,middlePOoX;
     [SerializeField] private float tweenDuration;
-    
+    [SerializeField] private GameObject selector;
+
     private void NotifyPowerWordListChangePerformed()
     {
         PowerWordListChangePerformed?.Invoke();
@@ -30,6 +31,7 @@ public class WordHolder: MonoBehaviour
         {
             instance = this;
         }
+        selector.SetActive(false);
     }
     public void Update()
     {
@@ -42,6 +44,28 @@ public class WordHolder: MonoBehaviour
             {
                 HideJournal();  
             }
+        if (_isInSelectionMode)
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                _isInSelectionMode = false;
+                selector.SetActive(false);
+                SelectWord();
+                currIndex = 0;
+                return;
+            }
+            if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                if (currIndex == 0) return;
+                currIndex--;
+                selector.GetComponent<RectTransform>().DOAnchorPosY(GetPosition(currIndex).y,.2f);
+            } else if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                if (currIndex == collectedWords.Count-1) return;
+                currIndex++;
+                selector.GetComponent<RectTransform>().DOAnchorPosY(GetPosition(currIndex).y, .2f);
+            }
+        }
     }
     public void AddWord(WordInfo word)
     {
@@ -54,6 +78,16 @@ public class WordHolder: MonoBehaviour
         if(!collectedWords.Contains(word)) return;
         collectedWords.Remove(word);
         NotifyPowerWordListChangePerformed();
+    }
+    public WordInfo SelectWord()
+    {
+        return collectedWords[currIndex];
+    }
+    public void StartSelection()
+    {
+        selector.SetActive(true);
+        selector.GetComponent<RectTransform>().anchoredPosition = GetPosition(currIndex);
+        _isInSelectionMode = true;
     }
     public int GetIndexOfWord(WordInfo word)
     {
@@ -69,5 +103,9 @@ public class WordHolder: MonoBehaviour
     {
         _rectTransform.DOAnchorPosX(leftPosX, tweenDuration);
         _isHidden = true;
+    }
+    private Vector3 GetPosition(int i)
+    {
+        return new Vector3(0, -50 + (-100 * i), 0);
     }
 }
