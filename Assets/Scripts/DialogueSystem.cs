@@ -16,6 +16,7 @@ public class DialogueSystem : MonoBehaviour
     private int index;
     private PlayerMovement _pl;
     public bool _needAWord = false;
+    public int _worldId;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void Start()
     {
+        WordHolder.instance.PowerWordSelected += CheckIfProperWord;
         gameObject.SetActive(false);
         dialogueText.text = string.Empty;
         _pl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
@@ -92,10 +94,26 @@ public class DialogueSystem : MonoBehaviour
             else
             {
                 dialogueText.text = lines[index];
+                WordHolder.instance.StartSelection();
             }
             
             
         }
+    }
+    void CheckIfProperWord()
+    {
+        if (WordHolder.instance._lastSelectedWord.wordID == _worldId)
+        {
+            dialogueText.text = "You have given me the right word!";
+            _needAWord = false;
+        }
+        else
+        {
+            dialogueText.text = "You have given me the wrong word!";
+            _needAWord = false;
+        }
+        
+
     }
     
 

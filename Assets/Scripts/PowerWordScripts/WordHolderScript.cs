@@ -19,13 +19,19 @@ public class WordHolder: MonoBehaviour
     [SerializeField] float leftPosX ,middlePOoX;
     [SerializeField] private float tweenDuration;
     [SerializeField] private GameObject selector;
-    private WordInfo _lastSelectedWord;
+    public WordInfo _lastSelectedWord;
+    public event Action PowerWordSelected;
 
     private void NotifyPowerWordListChangePerformed()
     {
         PowerWordListChangePerformed?.Invoke();
+        
     }
 
+    private void NotifyPowerWordSelected()
+    {
+        PowerWordSelected?.Invoke();
+    }
     private void Awake()
     {
         if (instance == null)
@@ -89,6 +95,7 @@ public class WordHolder: MonoBehaviour
         selector.SetActive(true);
         selector.GetComponent<RectTransform>().anchoredPosition = GetPosition(currIndex);
         _isInSelectionMode = true;
+        NotifyPowerWordSelected();
     }
     public int GetIndexOfWord(WordInfo word)
     {
