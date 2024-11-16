@@ -19,7 +19,7 @@ public class WordHolder: MonoBehaviour
     [SerializeField] float leftPosX ,middlePOoX;
     [SerializeField] private float tweenDuration;
     [SerializeField] private GameObject selector;
-    private WordInfo _lastSelectedWord;
+    public WordInfo _lastSelectedWord;
     public event Action PowerWordSelected;
 
     private void NotifyPowerWordListChangePerformed()

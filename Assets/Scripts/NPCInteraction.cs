@@ -61,6 +61,7 @@ public class NPCInteraction : MonoBehaviour, IInteractable
         if (_NPCInfo.NPCId == 1)
         {
             DialogueSystem.Instance._needAWord = true;
+            DialogueSystem.Instance._worldId = _NPCInfo.GivenWord.wordID;
         }
         else
         {
