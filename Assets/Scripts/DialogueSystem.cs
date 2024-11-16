@@ -15,7 +15,7 @@ public class DialogueSystem : MonoBehaviour
     private void Start()
     {
         dialogueText.text = string.Empty;
-        StartDialogue();
+        
     }
 
     private void Update()
@@ -34,7 +34,7 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
         index = 0;
         StartCoroutine(TypeLine());

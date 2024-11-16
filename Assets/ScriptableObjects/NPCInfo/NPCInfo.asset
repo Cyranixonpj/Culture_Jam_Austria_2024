@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: NPCInfo
   m_EditorClassIdentifier: 
   NPCId: 0
-  lines: []
+  lines:
+  - Ces z
+  - tgyhfvcfghvfgchvcfhv
+  - hcgfcfghcfhgfctghy
   GivenWord: 
