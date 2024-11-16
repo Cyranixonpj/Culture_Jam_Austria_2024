@@ -32,6 +32,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void Start()
     {
+        WordHolder.instance.PowerWordSelected += CheckIfProperWord;
         gameObject.SetActive(false);
         dialogueText.text = string.Empty;
         _pl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
@@ -96,6 +97,10 @@ public class DialogueSystem : MonoBehaviour
             
             
         }
+    }
+    void CheckIfProperWord()
+    {
+
     }
     
 
