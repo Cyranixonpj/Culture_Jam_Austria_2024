@@ -15,6 +15,7 @@ public class DialogueSystem : MonoBehaviour
     public float textSpeed;
     private int index;
     private PlayerMovement _pl;
+    public bool _needAWord = false;
 
     private void Awake()
     {
@@ -79,13 +80,25 @@ public class DialogueSystem : MonoBehaviour
             index++;
             dialogueText.text = string.Empty;
             StartCoroutine(TypeLine());
-        }
-        else
+        }else
         {
-            _pl.enabled = true;
-            dialogueText.text = string.Empty;
-            lines = new string[0]; // Clear the lines array
-            gameObject.SetActive(false);
+            if (_needAWord == false)
+            {
+                _pl.enabled = true;
+                dialogueText.text = string.Empty;
+                lines = new string[0]; 
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                dialogueText.text = lines[index];
+            }
+            
+            
         }
     }
+    
+
+
+  
 }
