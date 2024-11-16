@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 
 public class DialogueSystem : MonoBehaviour
@@ -13,10 +14,10 @@ public class DialogueSystem : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
+    private PlayerMovement _pl;
 
     private void Awake()
     {
-        
         if (Instance == null)
         {
             Instance = this;
@@ -32,6 +33,7 @@ public class DialogueSystem : MonoBehaviour
     {
         gameObject.SetActive(false);
         dialogueText.text = string.Empty;
+        _pl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     private void Update()
@@ -50,10 +52,13 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    public void StartDialogue()
+    public void StartDialogue(string[] newLines)
     {
+        _pl.enabled = false;
+        lines = newLines;
         index = 0;
         gameObject.SetActive(true);
+        dialogueText.text = string.Empty;
         StartCoroutine(TypeLine());
     }
 
@@ -76,6 +81,9 @@ public class DialogueSystem : MonoBehaviour
         }
         else
         {
+            _pl.enabled = true;
+            dialogueText.text = string.Empty;
+            lines = new string[0]; // Clear the lines array
             gameObject.SetActive(false);
         }
     }
