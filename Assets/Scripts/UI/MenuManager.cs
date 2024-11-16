@@ -8,11 +8,22 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject _mainView;
+    [SerializeField] private GameObject _creditsView;
+    private bool _isCreditsScene;
 
 
-    private void Start()
+    private void Awake()
     {
         _mainView.SetActive(true);
+        _creditsView.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.anyKeyDown && _isCreditsScene)
+        {
+            QuitToMainMenu();
+        }
     }
 
     #region mainView
@@ -20,24 +31,35 @@ public class MenuManager : MonoBehaviour
     public void StartClicked()
     {
         _mainView.SetActive(false);
-        SceneManager.LoadScene("SomeScene");
+        SceneManager.LoadScene("Levels");
     }
+
     public void ExitClicked()
     {
-        #if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-        #else
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
             Application.Quit();
-        #endif
+#endif
     }
+
     public void MuteClicked()
     {
         AudioListener.pause = !AudioListener.pause;
     }
+
     public void CreditsClicked()
     {
         _mainView.SetActive(false);
-        SceneManager.LoadScene("CreditsScene");
+        _creditsView.SetActive(true);
+        _isCreditsScene = true;
     }
+
+    public void QuitToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        _isCreditsScene = false;
+    }
+
     #endregion
-} 
+}
