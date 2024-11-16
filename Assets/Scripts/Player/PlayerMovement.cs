@@ -16,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
     
     private bool _isFacingRight = true;
+    public Sprite frontSprite;
+    public Sprite backSprite;
+    public Sprite sideSprite;
+
+    
     
     
     
@@ -36,18 +41,40 @@ public class PlayerMovement : MonoBehaviour
     
     void UpdateAnimations()
     {
-        if (speedX !=0 )
+        
+        if (speedX != 0)
         {
-            if (speedX >0)
+            _animator.SetBool("MDown", false);
+            _animator.SetBool("MUp", false);
+            _animator.SetBool("MLeft", false);
+            _animator.SetBool("MRight", true);
+            
+           // _spriteRenderer.sprite = sideSprite;
+            FlipSprite(speedX < 0);
+        }
+        else if (speedY != 0)
+        {
+            if (speedY > 0)
             {
-                _animator.SetTrigger("IsSide");
-                FlipSprite(false);
+                _animator.SetBool("MDown", false);
+                _animator.SetBool("MUp", true);
+                _animator.SetBool("MLeft", false);
+                _animator.SetBool("MRight", false);
             }
             else
             {
-                _animator.SetTrigger("IsSide");
-                FlipSprite(true);
+                _animator.SetBool("MDown", true);
+                _animator.SetBool("MUp", false);
+                _animator.SetBool("MLeft", false);
+                _animator.SetBool("MRight", false);
             }
+        }
+        else
+        {
+            _animator.SetBool("MDown", false);
+            _animator.SetBool("MUp", false);
+            _animator.SetBool("MLeft", false);
+            _animator.SetBool("MRight", false);
         }
     }
     private void FlipSprite(bool flip)
