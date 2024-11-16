@@ -7,15 +7,31 @@ using UnityEditor;
 
 public class DialogueSystem : MonoBehaviour
 {
+    public static DialogueSystem Instance { get; private set; }
+
     public TextMeshProUGUI dialogueText;
     public string[] lines;
     public float textSpeed;
     private int index;
 
+    private void Awake()
+    {
+        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
+        gameObject.SetActive(false);
         dialogueText.text = string.Empty;
-        
     }
 
     private void Update()
@@ -37,6 +53,7 @@ public class DialogueSystem : MonoBehaviour
     public void StartDialogue()
     {
         index = 0;
+        gameObject.SetActive(true);
         StartCoroutine(TypeLine());
     }
 

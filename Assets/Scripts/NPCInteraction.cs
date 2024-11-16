@@ -9,18 +9,11 @@ public class NPCInteraction : MonoBehaviour, IInteractable
     [SerializeField] private NPCInfo _NPCInfo;
     private bool _inRange;
     private PlayerMovement _pl;
-    // private NPCInfo _npcInfo;
-    private DialogueSystem _dialogueSystem;
-    
-
 
     void Start()
     {
-        _pl = GetComponent<PlayerMovement>();
-        _dialogueSystem = GetComponent<DialogueSystem>();
-        // _NPCInfo = GetComponent<NPCInfo>();
+        _pl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
-
 
     void Update()
     {
@@ -38,13 +31,10 @@ public class NPCInteraction : MonoBehaviour, IInteractable
         }
     }
 
-
     public void Interact()
     {
-
         string[] dialog = _NPCInfo.lines;
-        _dialogueSystem.lines = dialog;
-        _dialogueSystem.StartDialogue();
-
+        DialogueSystem.Instance.lines = dialog;
+        DialogueSystem.Instance.StartDialogue();
     }
 }
