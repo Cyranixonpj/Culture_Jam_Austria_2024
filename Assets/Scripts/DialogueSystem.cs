@@ -54,6 +54,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogue(string[] newLines)
     {
+        _pl.GetComponent<Rigidbody2D>().velocity = Vector2.zero; 
         _pl.enabled = false;
         lines = newLines;
         index = 0;
