@@ -2,6 +2,7 @@ fileFormatVersion: 2
 
 guid: 875b310c562739a47a374bbc8c61c9d6
 
+
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,7 +38,9 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
 
+
     filterMode: 0
+
 
     aniso: 1
     mipBias: 0
@@ -53,7 +56,9 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
 
+
   spritePixelsToUnits: 512
+
 
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -76,10 +81,12 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
 
+
     maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+
 
     compressionQuality: 50
     crunchedCompression: 0
