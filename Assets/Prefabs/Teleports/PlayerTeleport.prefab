@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd93d6ff1bdfa64883a37e48aed8522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaInfo: {fileID: 0}
+  areaInfo: {fileID: 11400000, guid: 3094f7c3ac2f086488b85aca3e019efb, type: 2}
   camera: {fileID: 0}
-  direction: 0
+  direction: 3
 --- !u!70 &5361125767265512918
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
