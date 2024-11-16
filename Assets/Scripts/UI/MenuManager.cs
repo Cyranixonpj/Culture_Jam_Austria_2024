@@ -31,7 +31,7 @@ public class MenuManager : MonoBehaviour
     public void StartClicked()
     {
         _mainView.SetActive(false);
-        SceneManager.LoadScene("Levels");
+        SceneManager.LoadScene("PN_AllAreas");
     }
 
     public void ExitClicked()
