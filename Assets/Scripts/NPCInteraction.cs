@@ -56,5 +56,7 @@ public class NPCInteraction : MonoBehaviour, IInteractable
     {
         string[] dialog = _NPCInfo.lines;
         DialogueSystem.Instance.StartDialogue(dialog);
+        if(_NPCInfo.GivenWord != null) 
+            WordHolder.instance.AddWord(_NPCInfo.GivenWord);
     }
 }

@@ -5,6 +5,6 @@ public class NPCInfo : ScriptableObject
 {
     public int NPCId;
     public string[] lines;
-    public string GivenWord;
+    public WordInfo GivenWord;
 
 }
