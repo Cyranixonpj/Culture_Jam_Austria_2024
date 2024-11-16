@@ -21,6 +21,7 @@ public class WordHolder: MonoBehaviour
     [SerializeField] private GameObject selector;
     public WordInfo _lastSelectedWord;
     public event Action PowerWordSelected;
+    private PlayerMovement playerMovement;
 
     private void NotifyPowerWordListChangePerformed()
     {
@@ -39,6 +40,7 @@ public class WordHolder: MonoBehaviour
             instance = this;
         }
         selector.SetActive(false);
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
     public void Update()
     {
@@ -89,13 +91,23 @@ public class WordHolder: MonoBehaviour
     public void SelectWord()
     {
         _lastSelectedWord = collectedWords[currIndex];
+        NotifyPowerWordSelected();
+        playerMovement.enabled = true;
+        HideJournal();
+        _canChangeHiddenStatus = true;
     }
     public void StartSelection()
     {
         selector.SetActive(true);
         selector.GetComponent<RectTransform>().anchoredPosition = GetPosition(currIndex);
         _isInSelectionMode = true;
-        NotifyPowerWordSelected();
+        playerMovement.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        playerMovement.enabled = false;
+        if (_isHidden)
+        {
+            ShowJournal();
+        }
+        _canChangeHiddenStatus = false;
     }
     public int GetIndexOfWord(WordInfo word)
     {

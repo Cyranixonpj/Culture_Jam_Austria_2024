@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ef195bc7f305cd4d819c647d5e3a84d, type: 3}
-  m_Name: NPCInfo1
+  m_Name: NeedAWordNPCAfterWrong
   m_EditorClassIdentifier: 
-  NPCId: 0
+  NPCId: 1
   lines:
-  - cccccccccc
-  - ccccccccc
-  - ccccccccc
-  - 
-  GivenWord: {fileID: 11400000, guid: 4d001388aef48514f9a629cf3edf3d65, type: 2}
+  - Nothing Happened
+  GivenWord: {fileID: 0}

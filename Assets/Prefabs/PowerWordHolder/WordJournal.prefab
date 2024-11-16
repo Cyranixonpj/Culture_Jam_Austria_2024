@@ -114,6 +114,7 @@ MonoBehaviour:
   middlePOoX: 200
   tweenDuration: 1
   selector: {fileID: 8249619891182888346}
+  _lastSelectedWord: {fileID: 0}
 --- !u!1 &7818363033266786558
 GameObject:
   m_ObjectHideFlags: 0

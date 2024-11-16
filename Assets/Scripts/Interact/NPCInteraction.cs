@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -57,19 +58,7 @@ public class NPCInteraction : MonoBehaviour, IInteractable
        
         string[] dialog = _NPCInfo.lines;
         DialogueSystem.Instance.StartDialogue(dialog);
-
-        if (_NPCInfo.NPCId == 1)
-        {
-            DialogueSystem.Instance._needAWord = true;
-            DialogueSystem.Instance._worldId = _NPCInfo.GivenWord.wordID;
-        }
-        else
-        {
-            if (_NPCInfo.GivenWord != null) 
-                WordHolder.instance.AddWord(_NPCInfo.GivenWord);
-            DialogueSystem.Instance._needAWord = false;
-        }
-
-       
+        if (_NPCInfo.GivenWord != null) 
+            WordHolder.instance.AddWord(_NPCInfo.GivenWord);
     }
 }

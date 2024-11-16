@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
+using DG.Tweening.Plugins;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -15,9 +16,7 @@ public class DialogueSystem : MonoBehaviour
     public float textSpeed;
     private int index;
     private PlayerMovement _pl;
-    public bool _needAWord = false;
-    public int _worldId;
-
+    public int _wordId;
     private void Awake()
     {
         if (Instance == null)
@@ -33,7 +32,6 @@ public class DialogueSystem : MonoBehaviour
 
     private void Start()
     {
-        WordHolder.instance.PowerWordSelected += CheckIfProperWord;
         gameObject.SetActive(false);
         dialogueText.text = string.Empty;
         _pl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
@@ -84,37 +82,13 @@ public class DialogueSystem : MonoBehaviour
             StartCoroutine(TypeLine());
         }else
         {
-            if (_needAWord == false)
-            {
-                _pl.enabled = true;
-                dialogueText.text = string.Empty;
-                lines = new string[0]; 
-                gameObject.SetActive(false);
-            }
-            else
-            {
-                dialogueText.text = lines[index];
-                WordHolder.instance.StartSelection();
-            }
-            
-            
+            _pl.enabled = true;
+            dialogueText.text = string.Empty;
+            lines = new string[0]; 
+            gameObject.SetActive(false);
         }
     }
-    void CheckIfProperWord()
-    {
-        if (WordHolder.instance._lastSelectedWord.wordID == _worldId)
-        {
-            dialogueText.text = "You have given me the right word!";
-            _needAWord = false;
-        }
-        else
-        {
-            dialogueText.text = "You have given me the wrong word!";
-            _needAWord = false;
-        }
-        
-
-    }
+    
     
 
 
