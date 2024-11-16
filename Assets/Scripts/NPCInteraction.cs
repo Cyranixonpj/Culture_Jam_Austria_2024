@@ -1,40 +1,60 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour, IInteractable
 {
     [SerializeField] private NPCInfo _NPCInfo;
-    private bool _inRange;
-    private PlayerMovement _pl;
-
-    void Start()
-    {
-        _pl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-    }
+    private List<NPCInteraction> _npcsInRange = new List<NPCInteraction>();
 
     void Update()
     {
-        if (!_inRange) return;
+        if (_npcsInRange.Count == 0) return;
         if (!Input.GetKeyDown(KeyCode.E)) return;
-        Interact();
-        _pl.enabled = false;
+
+        NPCInteraction closestNPC = GetClosestNPC();
+        if (closestNPC != null)
+        {
+            closestNPC.Interact();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            _inRange = true;
+            _npcsInRange.Add(this);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _npcsInRange.Remove(this);
+        }
+    }
+
+    private NPCInteraction GetClosestNPC()
+    {
+        NPCInteraction closestNPC = null;
+        float closestDistance = float.MaxValue;
+
+        foreach (var npc in _npcsInRange)
+        {
+            float distance = Vector2.Distance(npc.transform.position, transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestNPC = npc;
+            }
+        }
+
+        return closestNPC;
     }
 
     public void Interact()
     {
         string[] dialog = _NPCInfo.lines;
-        DialogueSystem.Instance.lines = dialog;
-        DialogueSystem.Instance.StartDialogue();
+        DialogueSystem.Instance.StartDialogue(dialog);
     }
 }
