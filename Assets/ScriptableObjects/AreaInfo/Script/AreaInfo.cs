@@ -6,9 +6,9 @@ using UnityEngine;
 public class AreaInfo : ScriptableObject 
 {
     public int AreaID;
-    public Vector3Int CameraPosition;
-    public Vector3Int PlayerNorthSpawnPos;
-    public Vector3Int PlayerEastSpawnPos;
-    public Vector3Int PlayerSouthSpawnPos;
-    public Vector3Int PlayerWestSpawnPos;
+    public Vector3 CameraPosition;
+    public Vector3 PlayerNorthSpawnPos;
+    public Vector3 PlayerEastSpawnPos;
+    public Vector3 PlayerSouthSpawnPos;
+    public Vector3 PlayerWestSpawnPos;
 }

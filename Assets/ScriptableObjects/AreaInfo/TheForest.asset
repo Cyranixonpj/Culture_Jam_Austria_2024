@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TheForest
   m_EditorClassIdentifier: 
   AreaID: 2
-  CameraPosition: {x: 0, y: 0, z: -10}
+  CameraPosition: {x: 25, y: 0, z: -10}
   PlayerNorthSpawnPos: {x: 0, y: 0, z: 0}
   PlayerEastSpawnPos: {x: 0, y: 0, z: 0}
   PlayerSouthSpawnPos: {x: 0, y: 0, z: 0}
-  PlayerWestSpawnPos: {x: 9, y: 0, z: 0}
+  PlayerWestSpawnPos: {x: 15.1, y: -1.36, z: 0}

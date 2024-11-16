@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 009b98cfdff8b324fba136b81ef52b0c, type: 3}
-  m_Name: TheVillage
+  m_Name: The Inn
   m_EditorClassIdentifier: 
-  AreaID: 1
-  CameraPosition: {x: 0, y: 0, z: -10}
-  PlayerNorthSpawnPos: {x: 0, y: 1.5, z: 0}
-  PlayerEastSpawnPos: {x: 9.7, y: -1.36, z: 0}
-  PlayerSouthSpawnPos: {x: 0, y: -4.5, z: 0}
+  AreaID: 3
+  CameraPosition: {x: 0, y: -16.616, z: -10}
+  PlayerNorthSpawnPos: {x: 3, y: -16.6, z: 0}
+  PlayerEastSpawnPos: {x: 0, y: 0, z: 0}
+  PlayerSouthSpawnPos: {x: 0, y: 0, z: 0}
   PlayerWestSpawnPos: {x: 0, y: 0, z: 0}
