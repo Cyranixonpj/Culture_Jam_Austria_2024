@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AreaID: 3
   CameraPosition: {x: 0, y: -16.616, z: -10}
-  PlayerNorthSpawnPos: {x: 3, y: -16.6, z: 0}
+  PlayerNorthSpawnPos: {x: 3, y: -17.36, z: 0}
   PlayerEastSpawnPos: {x: 0, y: 0, z: 0}
   PlayerSouthSpawnPos: {x: 0, y: 0, z: 0}
   PlayerWestSpawnPos: {x: 0, y: 0, z: 0}

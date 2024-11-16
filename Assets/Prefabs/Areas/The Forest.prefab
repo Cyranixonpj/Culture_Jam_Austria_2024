@@ -107,8 +107,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1166396787
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ac193424bf7346e41a33df0e3e121f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -191,8 +191,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1083394711
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 627573d9595c92648ac7d0768eef86b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -253,6 +253,14 @@ PrefabInstance:
     - target: {fileID: 7161894871727255384, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
       propertyPath: m_Name
       value: PlayerTeleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259886663572562131, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
+      propertyPath: areaInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 1920f5bf5c651bc4cae0c02c1c867f6a, type: 2}
+    - target: {fileID: 7259886663572562131, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
+      propertyPath: direction
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8707535348474943766, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
       propertyPath: m_LocalScale.x

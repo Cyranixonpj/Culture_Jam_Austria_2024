@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.101}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5422816086836855558
@@ -107,8 +107,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1166396787
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ac193424bf7346e41a33df0e3e121f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -191,8 +191,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1083394711
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d501bad20b0d5084baa4786af33f2c5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -256,6 +256,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTeleport (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7259886663572562131, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
+      propertyPath: areaInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ff3dc52c386d7248ae890a6e44c0086, type: 2}
+    - target: {fileID: 7259886663572562131, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
+      propertyPath: direction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8707535348474943766, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.46772382
@@ -307,8 +315,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7161894871727255384, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1057467296909532674}
   m_SourcePrefab: {fileID: 100100000, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
+--- !u!1 &5199601056077572113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7161894871727255384, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
+  m_PrefabInstance: {fileID: 3120036782897448777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1057467296909532674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5199601056077572113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63629579a34685f4b97477f60f395ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isInnEnterance: 1
 --- !u!4 &6024683459534970463 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8707535348474943766, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
@@ -325,6 +354,14 @@ PrefabInstance:
     - target: {fileID: 7161894871727255384, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
       propertyPath: m_Name
       value: PlayerTeleport (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259886663572562131, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
+      propertyPath: areaInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 77f099565c644c6438f979581de05b24, type: 2}
+    - target: {fileID: 7259886663572562131, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
+      propertyPath: direction
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8707535348474943766, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
       propertyPath: m_LocalPosition.x
@@ -391,10 +428,10 @@ PrefabInstance:
     - target: {fileID: 7259886663572562131, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
       propertyPath: areaInfo
       value: 
-      objectReference: {fileID: 11400000, guid: 1920f5bf5c651bc4cae0c02c1c867f6a, type: 2}
+      objectReference: {fileID: 11400000, guid: 3094f7c3ac2f086488b85aca3e019efb, type: 2}
     - target: {fileID: 7259886663572562131, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
       propertyPath: direction
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8707535348474943766, guid: a8c56471fe72723419bf1a37531cb108, type: 3}
       propertyPath: m_LocalScale.x
