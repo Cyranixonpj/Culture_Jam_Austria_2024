@@ -317,6 +317,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dba88a98bb993a47b665ea48fd82f3e, type: 3}
+--- !u!1001 &231631909
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.3959384
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728336553446758044, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_Name
+      value: SnowParticles_day
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
 --- !u!1 &256314138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2376727090287595838, guid: 04dd49d08bf874342abcfa8d6580ce53, type: 3}
@@ -975,6 +1032,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &596240576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 22.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728336553446758044, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_Name
+      value: SnowParticles_day (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
 --- !u!1001 &601796470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3428,6 +3542,63 @@ PolygonCollider2D:
       - {x: 0.175, y: 0.089999996}
       - {x: 0.195, y: 0.28}
   m_UseDelaunayMesh: 0
+--- !u!1001 &1969119007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.3959384
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198878979061345798, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728336553446758044, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
+      propertyPath: m_Name
+      value: SnowParticles_day (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bab7698bfcb4b634aad0332e5fbb975a, type: 3}
 --- !u!1 &1969159460 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8994546761514679179, guid: 04dd49d08bf874342abcfa8d6580ce53, type: 3}
@@ -4403,3 +4574,6 @@ SceneRoots:
   - {fileID: 3827551930145954734}
   - {fileID: 153769484}
   - {fileID: 469193400}
+  - {fileID: 231631909}
+  - {fileID: 596240576}
+  - {fileID: 1969119007}
