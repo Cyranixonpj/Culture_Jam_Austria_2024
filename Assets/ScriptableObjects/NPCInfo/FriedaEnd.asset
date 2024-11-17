@@ -14,7 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCId: 23131
   lines:
-  - HAHA
+  - "So Mister Klamm is our frequent guest and my lover, but lately he stopped visiting
+    me\u2026"
+  - "\u2026 I need to keep a good reputation among other villages, so could you help
+    me make him feel jealous?"
+  - "Do you know what happened to Amalia?! All her family is cursed since she declined
+    Counselor Sortini\u2019s generous offer\u2026 Keeps her mouth shut since then. "
+  - "Do you know what happened to Amalia?! All her family is cursed since she declined
+    Counselor Sortini\u2019s generous offer\u2026 Keeps her mouth shut since then. "
+  - "Rumors say that she now walks only at night\u2026 I heard she knows how to sneak
+    into the Castle\u2026 Anyway!"
   - If you help me, I might get you this precious permit out of his pocket. Do we
     have a deal?
-  GivenWord: {fileID: 0}
+  GivenWord: {fileID: 11400000, guid: 4b679068f8e83e6439672921c4736cba, type: 2}
