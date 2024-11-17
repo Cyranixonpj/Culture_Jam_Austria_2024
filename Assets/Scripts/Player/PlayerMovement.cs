@@ -16,13 +16,12 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
     
     private bool _isFacingRight = true;
-    public Sprite frontSprite;
-    public Sprite backSprite;
-    public Sprite sideSprite;
-
-    
-    
-    
+    private AudioManager _audioManager;
+    private bool walking;
+    private void Awake()
+    {
+        _audioManager = FindObjectOfType<AudioManager>();
+    }
     
     
     void Start()
@@ -37,6 +36,15 @@ public class PlayerMovement : MonoBehaviour
         speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
         speedY = Input.GetAxisRaw("Vertical") * movSpeed;
         _rb.velocity = new Vector2(speedX, speedY);
+
+        if (walking == true)
+        {
+            _audioManager.StartWalk();
+        }
+        else
+        {
+            _audioManager.StopWalk();
+        }
        UpdateAnimations();
     }
     
@@ -44,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     
     void UpdateAnimations()
     {
-        
+        walking = true;
         if (speedX != 0)
         {
             _animator.SetBool("MDown", false);
@@ -71,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            walking = false;
             _animator.SetBool("MDown", false);
             _animator.SetBool("MUp", false);
             _animator.SetBool("MRight", false);
