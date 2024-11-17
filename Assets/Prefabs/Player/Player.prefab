@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5384076361225822904}
   - component: {fileID: 8124487074872210026}
   - component: {fileID: 7520613770632330367}
-  - component: {fileID: 1470653145347118651}
+  - component: {fileID: 6479812736861067037}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -152,8 +152,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &1470653145347118651
-BoxCollider2D:
+--- !u!70 &6479812736861067037
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,16 +184,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.033411264, y: -0.64818084}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.7067039}
-    newSize: {x: 3.58, y: 6.11}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7460747, y: 0.41034222}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.02246101, y: -0.7524273}
+  m_Size: {x: 0.59865904, y: 0.20185553}
+  m_Direction: 1

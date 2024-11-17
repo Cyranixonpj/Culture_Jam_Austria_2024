@@ -27,14 +27,14 @@ RectTransform:
   m_GameObject: {fileID: 989574618293764754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.22819525, y: 0.6635377, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8634543031224649493}
+  m_Father: {fileID: 714258253225270093}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.336, y: -0.076}
+  m_AnchoredPosition: {x: 0.07667357, y: -0.05042923}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6919887763924733891
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 9060331471478265841}
   - component: {fileID: 3340437441484583261}
   - component: {fileID: -5453175974755916791}
-  - component: {fileID: 120221201310285001}
+  - component: {fileID: 7041510920707426908}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -205,7 +205,7 @@ Transform:
   m_LocalScale: {x: 4.382213, y: 1.5070734, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8634543031224649493}
+  - {fileID: 7132377107355008713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6998279687979930418
@@ -274,7 +274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo: {fileID: 11400000, guid: b5895fb6b3839464eb28b73151fff4ce, type: 2}
   popup: {fileID: 3805250839945540973, guid: 82a238251d355c043912027b36a7aab6, type: 3}
-  goodWord: 0
 --- !u!61 &3340437441484583261
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -307,7 +306,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005488813, y: 0.09442568}
+  m_Offset: {x: -0.0046105087, y: 0.16826665}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -318,7 +317,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0768431, y: 1.1888514}
+  m_Size: {x: 1.2210395, y: 1.3365333}
   m_EdgeRadius: 0
 --- !u!61 &-5453175974755916791
 BoxCollider2D:
@@ -365,7 +364,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &120221201310285001
+--- !u!114 &7041510920707426908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,74 +373,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1446811646436008455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a5673424a66dc94abdd9c683203b1f6, type: 3}
+  m_Script: {fileID: 11500000, guid: d1f510d0a462cf64d880361f5072723f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2381392098702453675
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8634543031224649493}
-  - component: {fileID: 6885436801591352739}
-  m_Layer: 0
-  m_Name: TextCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8634543031224649493
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2381392098702453675}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.22819522, y: 0.6635377, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7132377107355008713}
-  m_Father: {fileID: 714258253225270093}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &6885436801591352739
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2381392098702453675}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.012530297, y: 0.2506477}
-  m_Size: {x: 5.6568003, y: 3.1504261}
-  m_Direction: 1
+  objectInfo: {fileID: 11400000, guid: b5895fb6b3839464eb28b73151fff4ce, type: 2}

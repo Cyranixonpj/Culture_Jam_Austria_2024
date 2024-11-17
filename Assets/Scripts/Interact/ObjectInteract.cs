@@ -8,7 +8,6 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     [SerializeField] private ObjectInfo objectInfo;
     [SerializeField] private GameObject popup;
     private bool _inRange;
-    public bool goodWord = false;
     private Collider2D _collider;
     private SpriteRenderer _spriteRenderer;
     private ObjectInteract _ob;
@@ -92,7 +91,7 @@ public class ObjectInteract : MonoBehaviour, IInteractable
         }
 
         _collider.enabled = false;
-        Destroy(this);
+        Destroy(gameObject);
         //gameObject.SetActive(false);
     }
 
