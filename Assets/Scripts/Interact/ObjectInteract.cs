@@ -50,7 +50,6 @@ public class ObjectInteract : MonoBehaviour, IInteractable
         {
             var textObject = Instantiate(popup, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
             textObject.GetComponentInChildren<TextMeshProUGUI>().text = "WRONG WORD";
-            DisappearObject(1);
         }
     }
        
