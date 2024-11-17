@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject _mainView;
     [SerializeField] private GameObject _creditsView;
+    [SerializeField] private AudioListener _audioListener;
     private bool _isCreditsScene;
 
 
@@ -45,7 +46,7 @@ public class MenuManager : MonoBehaviour
 
     public void MuteClicked()
     {
-        AudioListener.pause = !AudioListener.pause;
+        
     }
 
     public void CreditsClicked()
