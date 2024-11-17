@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1712e1f0f69ed0041a3dadc48c3bf47e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordHolderPrefab: {fileID: 888658383736084758, guid: fbe0115b22c4677489d8a398e2273049, type: 3}
-  yStart: -50
+  yStart: -70
   ySpaceBetweenItems: 100
 --- !u!114 &7302113528008093103
 MonoBehaviour:
