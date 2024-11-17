@@ -1974,7 +1974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3374362641294713940, guid: bb45ef3fa9a16954bb8f5a4ddd74eb32, type: 3}
       propertyPath: m_fontSize
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3374362641294713940, guid: bb45ef3fa9a16954bb8f5a4ddd74eb32, type: 3}
       propertyPath: m_margin.w
@@ -1994,7 +1994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3374362641294713940, guid: bb45ef3fa9a16954bb8f5a4ddd74eb32, type: 3}
       propertyPath: m_fontSizeBase
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3374362641294713940, guid: bb45ef3fa9a16954bb8f5a4ddd74eb32, type: 3}
       propertyPath: m_fontColor32.rgba

@@ -11,18 +11,18 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     private Collider2D _collider;
     private SpriteRenderer _spriteRenderer;
     private ObjectInteract _ob;
-    private void Awake()
+    public void Awake()
     {
         _collider = GetComponent<Collider2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _ob = GetComponent<ObjectInteract>();
     }
-    void Start()
+    public void Start()
     {
         WordHolder.instance.PowerWordSelected += CheckIfCorrectWordSelected;
     }
 
-    void Update()
+    public void Update()
     {
         if (!_inRange) return;
         if (!Input.GetKeyDown(KeyCode.E)) return;
