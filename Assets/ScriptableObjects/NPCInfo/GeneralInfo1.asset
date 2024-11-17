@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32c1bd198cbb51647b71eb0ed97e99fa, type: 3}
-  m_Name: Broken
+  m_Script: {fileID: 11500000, guid: 4ef195bc7f305cd4d819c647d5e3a84d, type: 3}
+  m_Name: GeneralInfo1
   m_EditorClassIdentifier: 
-  wordID: 1
-  word: Broken
+  NPCId: 0
+  lines:
+  - The gate will not open.
+  GivenWord: {fileID: 0}

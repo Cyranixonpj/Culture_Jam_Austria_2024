@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
+        _rb.freezeRotation = true;
     }
     void Update()
     {
@@ -39,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
        UpdateAnimations();
     }
     
+    
+    
     void UpdateAnimations()
     {
         
@@ -46,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
         {
             _animator.SetBool("MDown", false);
             _animator.SetBool("MUp", false);
-            _animator.SetBool("MLeft", false);
             _animator.SetBool("MRight", true);
             
            // _spriteRenderer.sprite = sideSprite;
@@ -58,14 +60,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 _animator.SetBool("MDown", false);
                 _animator.SetBool("MUp", true);
-                _animator.SetBool("MLeft", false);
                 _animator.SetBool("MRight", false);
             }
             else
             {
                 _animator.SetBool("MDown", true);
                 _animator.SetBool("MUp", false);
-                _animator.SetBool("MLeft", false);
                 _animator.SetBool("MRight", false);
             }
         }
@@ -73,7 +73,6 @@ public class PlayerMovement : MonoBehaviour
         {
             _animator.SetBool("MDown", false);
             _animator.SetBool("MUp", false);
-            _animator.SetBool("MLeft", false);
             _animator.SetBool("MRight", false);
         }
     }

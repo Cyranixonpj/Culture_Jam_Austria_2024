@@ -8,6 +8,7 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     [SerializeField] private ObjectInfo objectInfo;
     [SerializeField] private GameObject popup;
     private bool _inRange;
+    public bool goodWord = false;
 
     void Start()
     {
@@ -35,10 +36,14 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     {
         if (WordHolder.instance._lastSelectedWord == objectInfo.requriedWord)
             Debug.Log("Zniszczone");
+            goodWord = true;
+        }
         else
         {
             var textObject = Instantiate(popup, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
             textObject.GetComponentInChildren<TextMeshProUGUI>().text = "WRONG WORD";
+            Debug.Log("Zniszczone");
+            goodWord = false;
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
