@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ef195bc7f305cd4d819c647d5e3a84d, type: 3}
-  m_Name: NPCInfo1
+  m_Name: NPCAmalia1
   m_EditorClassIdentifier: 
   NPCId: 0
   lines:
