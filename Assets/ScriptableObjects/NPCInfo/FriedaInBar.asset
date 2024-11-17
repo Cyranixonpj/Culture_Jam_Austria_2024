@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCId: 123
   lines:
-  - Hi Im Frieda
+  - 'Hm? Oh, a new face I see. You must be hired by The Castle, right? '
   - LOLOLOLOLO
   - Come to my room in a few hours.
   GivenWord: {fileID: 0}
