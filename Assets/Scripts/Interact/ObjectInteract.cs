@@ -9,7 +9,15 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     [SerializeField] private GameObject popup;
     private bool _inRange;
     public bool goodWord = false;
-
+    private Collider2D _collider;
+    private SpriteRenderer _spriteRenderer;
+    private ObjectInteract _ob;
+    private void Awake()
+    {
+        _collider = GetComponent<Collider2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _ob = GetComponent<ObjectInteract>();
+    }
     void Start()
     {
         WordHolder.instance.PowerWordSelected += CheckIfCorrectWordSelected;
@@ -34,25 +42,26 @@ public class ObjectInteract : MonoBehaviour, IInteractable
 
     public void CheckIfCorrectWordSelected()
     {
+        Debug.Log("Halo");
         if (WordHolder.instance._lastSelectedWord == objectInfo.requriedWord)
-            Debug.Log("Zniszczone");
-            goodWord = true;
+        {
+            DisappearObject(1);
         }
         else
         {
             var textObject = Instantiate(popup, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
             textObject.GetComponentInChildren<TextMeshProUGUI>().text = "WRONG WORD";
-            Debug.Log("Zniszczone");
-            goodWord = false;
+            DisappearObject(1);
         }
     }
+       
     private void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.gameObject.CompareTag("Player"))
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            _inRange = true;
-        }
+        _inRange = true;
     }
+}
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -60,6 +69,31 @@ public class ObjectInteract : MonoBehaviour, IInteractable
         {
             _inRange = false;
         }
+    }
+    public void DisappearObject(float duration)
+    {
+        StartCoroutine(FadeOutAndDisableCollider(duration));
+    }
+
+    private IEnumerator FadeOutAndDisableCollider(float duration)
+    {
+        float startAlpha = _spriteRenderer.color.a;
+        float rate = 1.0f / duration;
+        float progress = 0.0f;
+
+        while (progress < 1.0f)
+        {
+            Color tmpColor = _spriteRenderer.color;
+            tmpColor.a = Mathf.Lerp(startAlpha, 0, progress);
+            _spriteRenderer.color = tmpColor;
+            progress += rate * Time.deltaTime;
+
+            yield return null;
+        }
+
+        _collider.enabled = false;
+        Destroy(this);
+        //gameObject.SetActive(false);
     }
 
 }

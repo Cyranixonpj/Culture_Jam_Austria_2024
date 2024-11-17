@@ -91,10 +91,10 @@ public class WordHolder: MonoBehaviour
     public void SelectWord()
     {
         _lastSelectedWord = collectedWords[currIndex];
-        NotifyPowerWordSelected();
         playerMovement.enabled = true;
-        HideJournal();
         _canChangeHiddenStatus = true;
+        NotifyPowerWordSelected();
+        HideJournal();
     }
     public void StartSelection()
     {
