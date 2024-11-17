@@ -99,6 +99,7 @@ public class WordHolder: MonoBehaviour
     public void StartSelection()
     {
         selector.SetActive(true);
+        selector.transform.SetAsLastSibling();
         selector.GetComponent<RectTransform>().anchoredPosition = GetPosition(currIndex);
         _isInSelectionMode = true;
         playerMovement.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -126,6 +127,6 @@ public class WordHolder: MonoBehaviour
     }
     private Vector3 GetPosition(int i)
     {
-        return new Vector3(0, -50 + (-100 * i), 0);
+        return new Vector3(0, -70 + (-100 * i), 0);
     }
 }
