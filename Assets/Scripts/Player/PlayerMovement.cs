@@ -16,9 +16,10 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
     
     private bool _isFacingRight = true;
-    public Sprite frontSprite;
-    public Sprite backSprite;
-    public Sprite sideSprite;
+    private AudioManager _audioManager;
+    private bool walking;
+
+ 
 
     
     
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         _rb.freezeRotation = true;
     }
     void Update()
@@ -38,13 +40,22 @@ public class PlayerMovement : MonoBehaviour
         speedY = Input.GetAxisRaw("Vertical") * movSpeed;
         _rb.velocity = new Vector2(speedX, speedY);
        UpdateAnimations();
+       if (walking == true)
+       {
+           _audioManager.StartWalk();
+       }
+       else
+       {
+           _audioManager.StopWalk();
+       }
     }
     
     
     
     void UpdateAnimations()
     {
-        
+
+        walking = true;
         if (speedX != 0)
         {
             _animator.SetBool("MDown", false);
@@ -71,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            walking = false;
             _animator.SetBool("MDown", false);
             _animator.SetBool("MUp", false);
             _animator.SetBool("MRight", false);
