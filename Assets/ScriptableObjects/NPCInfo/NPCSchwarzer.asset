@@ -19,10 +19,8 @@ MonoBehaviour:
   - "And no one\u2019s allowed to do that without a permit from the count. However,
     you don\u2019t have any such permit, or at least you haven\u2019t shown one."
   - "Are you a land surveyor? Honestly, I don\u2019t remember the Castle hiring people
-    of your profession, so most likely they have not."
-  - "Are you a land surveyor? Honestly, I don\u2019t remember the Castle hiring people
-    of your profession, so most likely they have not."
-  - "There can\u2019t be a mistake. Well, anyway, you cannot enter without a permit.
-    And I am afraid it\u2019s impossible to get one now\u2026 or ever, actually.
-    Sorry to disappoint."
+    of your profession."
+  - "There can\u2019t have been a mistake. Well, anyway, you cannot enter without
+    a permit. And I am afraid it\u2019s impossible to get one now\u2026 or ever,
+    actually. Sorry to disappoint."
   GivenWord: {fileID: 0}

@@ -16,8 +16,8 @@ MonoBehaviour:
   lines:
   - 'Hm? Oh, a new face I see. You must be hired by The Castle, right? '
   - No one appears there if they weren't hired.
-  - . Castle employees drink here for free, so let me pour one for you.
-  - "By the way, where is your permit? I always wanted to see one of the new clerk\u2019s\u2026 "
+  - Castle employees drink here for free, so let me pour one out for you.
+  - By the way, where is your permit? I always wanted to see one of those...
   - "Oh, you don\u2019t have it. Liar\u2026 But we could help each other. "
   - Come to my room in a few hours.
   GivenWord: {fileID: 0}
