@@ -127,6 +127,6 @@ public class WordHolder: MonoBehaviour
     }
     private Vector3 GetPosition(int i)
     {
-        return new Vector3(0, -70 + (-100 * i), 0);
+        return new Vector3(0, -160 + (-100 * i), 0);
     }
 }

@@ -18,13 +18,18 @@ public class DialogueSystem : MonoBehaviour
     private PlayerMovement _pl;
     public int _wordId;
     public event Action FriedaInBarTalkedTo;
+    public event Action FriedaEnd;
     private bool _itsFrieda = false;
+    private bool _itsEnd = false;
 
 
     private void NotifyFriedaInBarTalkedTo()
     {
         FriedaInBarTalkedTo?.Invoke();
-
+    }
+    private void NotifyFriedaEnd()
+    {
+        FriedaEnd?.Invoke();
     }
     private void Awake()
     {
@@ -73,6 +78,8 @@ public class DialogueSystem : MonoBehaviour
         StartCoroutine(TypeLine());
         if (lines[lines.Length-1] == "Come to my room in a few hours.")
             _itsFrieda = true;
+        if (lines[lines.Length - 1] == "If you help me, I might get you this precious permit out of his pocket. Do we have a deal?")
+            _itsEnd = true;
     }
 
     IEnumerator TypeLine()
@@ -97,6 +104,11 @@ public class DialogueSystem : MonoBehaviour
             {
                 NotifyFriedaInBarTalkedTo();
                 _itsFrieda= false;
+            }
+            if (_itsEnd)
+            {
+                NotifyFriedaEnd();
+                _itsEnd= false;
             }
             _pl.enabled = true;
             dialogueText.text = string.Empty;

@@ -9,9 +9,16 @@ public class THEFriedaBarScript : MonoBehaviour
     [SerializeField] private GameObject textOne;
     [SerializeField] private GameObject textTwo;
     [SerializeField] private GameObject textThree;
-    private void Start()
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject camera;
+    private PlayerMovement pm;
+    private DrunkPlayerMovement dpm;
+    public void Start()
     {
         DialogueSystem.Instance.FriedaInBarTalkedTo += StartCutscene;
+        pm = player.GetComponent<PlayerMovement>();
+        dpm = player.GetComponent<DrunkPlayerMovement>();
+
     }
 
 
@@ -22,12 +29,19 @@ public class THEFriedaBarScript : MonoBehaviour
     private IEnumerator Sequence()
     {
         yield return StartCoroutine(FadeIn(darkness, 1.5f));
+        pm.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        pm.enabled = false;
         yield return StartCoroutine(FadeInText(textOne, 1.5f));
         yield return StartCoroutine(FadeInText(textTwo, 1.5f));
         yield return StartCoroutine(FadeInText(textThree, 1.5f));
         yield return StartCoroutine(FadeOutText(textOne, 1f));
         yield return StartCoroutine(FadeOutText(textTwo, 1f));
         yield return StartCoroutine(FadeOutText(textThree, 1f));
+        player.transform.position = new Vector3(7.6f, -32.41f, 0f);
+        player.transform.localScale = new Vector3(2f, 2f, 0);
+        camera.transform.position = new Vector3(0, -33.13f, -10f);
+        dpm.enabled = true;
+        Destroy(gameObject);
     }
     private IEnumerator FadeIn(GameObject gameObject, float duration)
     {
