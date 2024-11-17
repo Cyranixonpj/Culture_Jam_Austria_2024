@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ObjectInteract : MonoBehaviour, IInteractable
 {
-    [SerializeField] private WordInfo requriedWord;
+    [SerializeField] private ObjectInfo objectInfo;
     [SerializeField] private GameObject popup;
     private bool _inRange;
 
@@ -22,12 +22,18 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
+        if (WordHolder.instance.collectedWords.Count <= 0)
+        {
+            var textObject = Instantiate(popup, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
+            textObject.GetComponentInChildren<TextMeshProUGUI>().text = "NO WORDS OWNED";
+            return;
+        }
         WordHolder.instance.StartSelection();
     }
 
     public void CheckIfCorrectWordSelected()
     {
-        if (WordHolder.instance._lastSelectedWord == requriedWord)
+        if (WordHolder.instance._lastSelectedWord == objectInfo.requriedWord)
             Debug.Log("Zniszczone");
         else
         {
