@@ -17,6 +17,15 @@ public class DialogueSystem : MonoBehaviour
     private int index;
     private PlayerMovement _pl;
     public int _wordId;
+    public event Action FriedaInBarTalkedTo;
+    private bool _itsFrieda = false;
+
+
+    private void NotifyFriedaInBarTalkedTo()
+    {
+        FriedaInBarTalkedTo?.Invoke();
+
+    }
     private void Awake()
     {
         if (Instance == null)
@@ -62,6 +71,8 @@ public class DialogueSystem : MonoBehaviour
         gameObject.SetActive(true);
         dialogueText.text = string.Empty;
         StartCoroutine(TypeLine());
+        if (lines[lines.Length-1] == "Come to my room in a few hours.")
+            _itsFrieda = true;
     }
 
     IEnumerator TypeLine()
@@ -82,6 +93,11 @@ public class DialogueSystem : MonoBehaviour
             StartCoroutine(TypeLine());
         }else
         {
+            if (_itsFrieda)
+            {
+                NotifyFriedaInBarTalkedTo();
+                _itsFrieda= false;
+            }
             _pl.enabled = true;
             dialogueText.text = string.Empty;
             lines = new string[0]; 

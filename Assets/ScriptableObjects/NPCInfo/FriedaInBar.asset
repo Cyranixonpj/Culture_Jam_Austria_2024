@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ef195bc7f305cd4d819c647d5e3a84d, type: 3}
-  m_Name: NPCInfo3
+  m_Name: FriedaInBar
   m_EditorClassIdentifier: 
-  NPCId: 0
+  NPCId: 123
   lines:
-  - ' bbbbbbbbb'
-  - bbbbbbbbb
-  - bbbbbbbb
-  GivenWord: 
+  - Hi Im Frieda
+  - LOLOLOLOLO
+  - lmao even
+  GivenWord: {fileID: 0}
