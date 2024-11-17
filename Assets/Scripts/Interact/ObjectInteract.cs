@@ -42,6 +42,7 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     public void CheckIfCorrectWordSelected()
     {
         Debug.Log("Halo");
+        DisappearObject(1);
         if (WordHolder.instance._lastSelectedWord == objectInfo.requriedWord)
         {
             DisappearObject(1);
