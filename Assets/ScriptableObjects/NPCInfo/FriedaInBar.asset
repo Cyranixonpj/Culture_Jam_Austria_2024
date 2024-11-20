@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef195bc7f305cd4d819c647d5e3a84d, type: 3}
+  m_Name: FriedaInBar
+  m_EditorClassIdentifier: 
+  NPCId: 123
+  lines:
+  - 'Hm? Oh, a new face I see. You must be hired by The Castle, right? '
+  - No one appears there if they weren't hired.
+  - Castle employees drink here for free, so let me pour one out for you.
+  - By the way, where is your permit? I always wanted to see one of those...
+  - "Oh, you don\u2019t have it. Liar\u2026 But we could help each other. "
+  - Come to my room in a few hours.
+  GivenWord: {fileID: 0}

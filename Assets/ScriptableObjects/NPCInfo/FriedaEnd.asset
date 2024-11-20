@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef195bc7f305cd4d819c647d5e3a84d, type: 3}
+  m_Name: FriedaEnd
+  m_EditorClassIdentifier: 
+  NPCId: 23131
+  lines:
+  - "Mister Klamm is our frequent guest and my lover, but lately he stopped visiting
+    me\u2026"
+  - "\u2026 I need to keep a good reputation among the other  villagers, so could
+    you help me make him feel jealous?"
+  - "Do you know what happened to Amalia?! Her entire family is cursed since she
+    declined Counselor Sortini\u2019s generous offer\u2026 Keeps her mouth shut since
+    then. "
+  - "Rumors say that she now walks only at night\u2026 I heard she knows how to sneak
+    into the Castle\u2026 Anyway!"
+  - If you help me, I might get you this precious permit out of his pocket. Do we
+    have a deal?
+  GivenWord: {fileID: 11400000, guid: 4b679068f8e83e6439672921c4736cba, type: 2}
