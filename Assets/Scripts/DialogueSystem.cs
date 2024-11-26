@@ -19,6 +19,7 @@ public class DialogueSystem : MonoBehaviour
     public int _wordId;
     public event Action FriedaInBarTalkedTo;
     public event Action FriedaEnd;
+    public bool dialogueActive = false;
     private bool _itsFrieda = false;
     private bool _itsEnd = false;
 
@@ -53,7 +54,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
         {
             if (dialogueText.text == lines[index])
             {
@@ -69,6 +70,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogue(string[] newLines)
     {
+        dialogueActive = true;
         _pl.GetComponent<Rigidbody2D>().velocity = Vector2.zero; 
         _pl.enabled = false;
         lines = newLines;
@@ -110,6 +112,7 @@ public class DialogueSystem : MonoBehaviour
                 NotifyFriedaEnd();
                 _itsEnd= false;
             }
+            dialogueActive = false;
             _pl.enabled = true;
             dialogueText.text = string.Empty;
             lines = new string[0]; 

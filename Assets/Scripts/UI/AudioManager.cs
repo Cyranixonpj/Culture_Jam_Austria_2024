@@ -30,6 +30,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             windSource.Play();
+            windSource.loop = true;
             //tavernMusic.Stop();
         }
 

@@ -11,6 +11,7 @@ public class NPCInteraction : MonoBehaviour, IInteractable
     {
         if (_npcsInRange.Count == 0) return;
         if (!Input.GetKeyDown(KeyCode.E)) return;
+        if (DialogueSystem.Instance.dialogueActive) return;
 
         NPCInteraction closestNPC = GetClosestNPC();
         if (closestNPC != null)

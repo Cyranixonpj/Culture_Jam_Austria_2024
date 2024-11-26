@@ -41,11 +41,12 @@ public class ObjectInteract : MonoBehaviour, IInteractable
 
     public void CheckIfCorrectWordSelected()
     {
+        if(!_inRange) return;
         Debug.Log("Halo");
-        DisappearObject(1);
         if (WordHolder.instance._lastSelectedWord == objectInfo.requriedWord)
         {
             DisappearObject(1);
+            Debug.Log("LolZniknale");
         }
         else
         {
@@ -94,5 +95,8 @@ public class ObjectInteract : MonoBehaviour, IInteractable
         Destroy(gameObject);
         //gameObject.SetActive(false);
     }
-
+    void OnDestroy()
+    {
+        WordHolder.instance.PowerWordSelected -= CheckIfCorrectWordSelected;
+    }
 }
