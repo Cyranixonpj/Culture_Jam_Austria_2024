@@ -13,17 +13,20 @@ public class THEFriedaBarScript : MonoBehaviour
     [SerializeField] private GameObject camera;
     private PlayerMovement pm;
     private DrunkPlayerMovement dpm;
+    [SerializeField] private GameObject amelia;
+    private BoxCollider2D ameliaCollider;
     public void Start()
     {
         DialogueSystem.Instance.FriedaInBarTalkedTo += StartCutscene;
         pm = player.GetComponent<PlayerMovement>();
         dpm = player.GetComponent<DrunkPlayerMovement>();
-
+        ameliaCollider = amelia.GetComponent<BoxCollider2D>();
     }
 
 
     private void StartCutscene()
     {
+        ameliaCollider.enabled = false;
         StartCoroutine(Sequence());
     }
     private IEnumerator Sequence()

@@ -13,12 +13,17 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     private SpriteRenderer _spriteRenderer;
     private ObjectInteract _ob;
     private Material _originalMaterial; // Original material reference
+    public bool isHouse;
+    [SerializeField] private GameObject amelia;
+    private BoxCollider2D ameliaCollider;
 
     public void Awake()
     {
         _collider = GetComponent<Collider2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _ob = GetComponent<ObjectInteract>();
+        if(isHouse)
+            ameliaCollider = amelia.GetComponent<BoxCollider2D>();
     }
 
     public void Start()
@@ -58,7 +63,7 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     {
         if (WordHolder.instance.collectedWords.Count <= 0)
         {
-            var textObject = Instantiate(popup, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
+            var textObject = Instantiate(popup, new Vector3(transform.position.x, transform.position.y+10), Quaternion.identity);
             textObject.GetComponentInChildren<TextMeshProUGUI>().text = "NO WORDS OWNED";
             return;
         }
@@ -73,10 +78,14 @@ public class ObjectInteract : MonoBehaviour, IInteractable
         {
             DisappearObject(1);
             Debug.Log("LolZniknale");
+            if (isHouse)
+            {
+                ameliaCollider.enabled = true;
+            }
         }
         else
         {
-            var textObject = Instantiate(popup, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
+            var textObject = Instantiate(popup, new Vector3(transform.position.x, transform.position.y+1), Quaternion.identity);
             textObject.GetComponentInChildren<TextMeshProUGUI>().text = "WRONG WORD";
         }
     }
@@ -127,6 +136,7 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     {
         WordHolder.instance.PowerWordSelected -= CheckIfCorrectWordSelected;
 
+    }
     private void EnableHighlight()
     {
         if (_spriteRenderer != null && highlightMaterial != null)
