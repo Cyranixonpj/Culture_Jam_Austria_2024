@@ -68,7 +68,7 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     {
         if (WordHolder.instance.collectedWords.Count <= 0)
         {
-            var textObject = Instantiate(popup, new Vector3(transform.position.x, transform.position.y+3), Quaternion.identity);
+            var textObject = Instantiate(popup, new Vector3(transform.position.x, transform.position.y+2), Quaternion.identity);
             textObject.GetComponentInChildren<TextMeshProUGUI>().text = "NO WORDS OWNED";
             return;
         }
