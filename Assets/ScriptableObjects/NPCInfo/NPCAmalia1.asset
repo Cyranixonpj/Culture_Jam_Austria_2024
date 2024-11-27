@@ -19,5 +19,5 @@ MonoBehaviour:
   - "Of course, I am. Well, the passage to the Castle is closed, and it won\u2019t
     open any time soon. "
   - "So why don\u2019t you help me get rid of this tree over there? It was a perfectly
-    splendid road yesterday.\u201D"
+    <i>clear</i> road yesterday.\u201D"
   GivenWord: {fileID: 11400000, guid: 4d001388aef48514f9a629cf3edf3d65, type: 2}

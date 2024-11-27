@@ -19,6 +19,7 @@ MonoBehaviour:
     aren\u2019t you? "
   - "Fine, I\u2019ll tell you how to get in. I actually would love to see this place
     going mad with your presence, mr. Clerk."
-  - "So listen closely\u2026 There is a secret path through the crack in the wall
-    to the east from the gates. It\u2019s narrow, but you should be able to go through."
+  - "So listen closely\u2026 There is <i>a secret path</i> through the crack in the
+    wall to the east from the gates. The path is narrow, but you should be able to
+    go through."
   GivenWord: {fileID: 11400000, guid: 9019ac1af1a54254cba2cbfa64ba460e, type: 2}

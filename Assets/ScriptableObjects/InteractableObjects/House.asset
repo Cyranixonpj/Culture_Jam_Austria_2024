@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectID: 1
   requriedWord: {fileID: 11400000, guid: 4b679068f8e83e6439672921c4736cba, type: 2}
-  popupText: Amelia is only home at night.
+  popupText: Amalia is usually here <i>in the morning</i>

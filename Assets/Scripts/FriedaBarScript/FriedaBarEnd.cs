@@ -22,7 +22,13 @@ public class FriedaBarEnd : MonoBehaviour
     private BoxCollider2D ameliaCollider;
     private PlayerMovement pm;
     private Light2D light;
-
+    [SerializeField] private GameObject sunOne;
+    [SerializeField] private GameObject sunTwo;
+    [SerializeField] private GameObject sunThree;
+    private SpriteRenderer sunOneSprite;
+    private SpriteRenderer sunTwoSprite;
+    private SpriteRenderer sunThreeSprite;
+    [SerializeField] private Sprite moon;
 
     public void Start()
     {
@@ -30,6 +36,9 @@ public class FriedaBarEnd : MonoBehaviour
         DialogueSystem.Instance.FriedaEnd += StartCutscene;
         pm = player.GetComponent<PlayerMovement>();
         ameliaCollider = amelia.GetComponent<BoxCollider2D>();
+        sunOneSprite = sunOne.GetComponent<SpriteRenderer>();
+        sunTwoSprite = sunTwo.GetComponent<SpriteRenderer>();
+        sunThreeSprite = sunThree.GetComponent<SpriteRenderer>();
     }
     private void StartCutscene()
     {
@@ -49,7 +58,10 @@ public class FriedaBarEnd : MonoBehaviour
         Destroy(snowOne);
         Destroy(snowTwo);
         Destroy(snowThree);
-        //light.color = new Color32(4,4,4,255);
+        sunOneSprite.sprite = moon;
+        sunTwoSprite.sprite = moon;
+        sunThreeSprite.sprite = moon;
+        light.color = new Color32(4,4,4,255);
         player.transform.position = new Vector3(3f, -17.36f, 0f);
         player.transform.localScale = new Vector3(2f, 2f, 0);
         camera.transform.position = new Vector3(0, -16.616f, -10f);

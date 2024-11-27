@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectID: 1
   requriedWord: {fileID: 11400000, guid: 4d001388aef48514f9a629cf3edf3d65, type: 2}
-  popupText: There is a tree in my way.
+  popupText: The passage is <i>blocked</i>

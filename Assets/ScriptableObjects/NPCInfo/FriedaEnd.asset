@@ -21,8 +21,8 @@ MonoBehaviour:
   - "Do you know what happened to Amalia?! Her entire family is cursed since she
     declined Counselor Sortini\u2019s generous offer\u2026 Keeps her mouth shut since
     then. "
-  - "Rumors say that she now walks only at night\u2026 I heard she knows how to sneak
-    into the Castle\u2026 Anyway!"
+  - "Rumors say that she now walks only <i>at night</i>\u2026 I heard she knows how
+    to sneak into the Castle\u2026 Anyway!"
   - If you help me, I might get you this precious permit out of his pocket. Do we
     have a deal?
   GivenWord: {fileID: 11400000, guid: 4b679068f8e83e6439672921c4736cba, type: 2}

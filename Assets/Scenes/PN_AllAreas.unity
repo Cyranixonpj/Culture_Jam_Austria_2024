@@ -359,6 +359,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 1016429260}
+    - target: {fileID: 1589220184375640647, guid: 0adf78c2776cbae499a4616aaad494d7, type: 3}
+      propertyPath: HighlightMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: ad88274cec498ea43a2cb5e77d8899e4, type: 2}
     - target: {fileID: 5732190178678138778, guid: 0adf78c2776cbae499a4616aaad494d7, type: 3}
       propertyPath: camera
       value: 
@@ -366,6 +370,14 @@ PrefabInstance:
     - target: {fileID: 8317409902432928827, guid: 0adf78c2776cbae499a4616aaad494d7, type: 3}
       propertyPath: m_Name
       value: The Crossroads
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738331201106575728, guid: 0adf78c2776cbae499a4616aaad494d7, type: 3}
+      propertyPath: m_Size.y
+      value: 2.893941
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738331201106575728, guid: 0adf78c2776cbae499a4616aaad494d7, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.56959486
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2388,6 +2400,10 @@ PrefabInstance:
       value: Background (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5356060153586777792, guid: 0fff25f5ade69de49b10b5181cb3d0a2, type: 3}
+      propertyPath: moon
+      value: 
+      objectReference: {fileID: 21300000, guid: e6f297de0ffa7fb4499b8e1d9efd27d0, type: 3}
+    - target: {fileID: 5356060153586777792, guid: 0fff25f5ade69de49b10b5181cb3d0a2, type: 3}
       propertyPath: amelia
       value: 
       objectReference: {fileID: 1843660931}
@@ -2400,6 +2416,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1606898016}
     - target: {fileID: 5356060153586777792, guid: 0fff25f5ade69de49b10b5181cb3d0a2, type: 3}
+      propertyPath: sunOne
+      value: 
+      objectReference: {fileID: 466466990}
+    - target: {fileID: 5356060153586777792, guid: 0fff25f5ade69de49b10b5181cb3d0a2, type: 3}
+      propertyPath: sunTwo
+      value: 
+      objectReference: {fileID: 1013480876}
+    - target: {fileID: 5356060153586777792, guid: 0fff25f5ade69de49b10b5181cb3d0a2, type: 3}
       propertyPath: snowOne
       value: 
       objectReference: {fileID: 899962548}
@@ -2407,6 +2431,10 @@ PrefabInstance:
       propertyPath: snowTwo
       value: 
       objectReference: {fileID: 742876920}
+    - target: {fileID: 5356060153586777792, guid: 0fff25f5ade69de49b10b5181cb3d0a2, type: 3}
+      propertyPath: sunThree
+      value: 
+      objectReference: {fileID: 1724916033}
     - target: {fileID: 5356060153586777792, guid: 0fff25f5ade69de49b10b5181cb3d0a2, type: 3}
       propertyPath: oldAmelia
       value: 
