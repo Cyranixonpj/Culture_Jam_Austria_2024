@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using static UnityEngine.GraphicsBuffer;
 
 public class ObjectInteract : MonoBehaviour, IInteractable
 {
@@ -16,14 +18,29 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     public bool isHouse;
     [SerializeField] private GameObject amelia;
     private BoxCollider2D ameliaCollider;
+    [SerializeField] private GameObject lightObject;
+    private Light2D light;
+    [SerializeField] private GameObject sunOne;
+    [SerializeField] private GameObject sunTwo;
+    [SerializeField] private GameObject sunThree;
+    private SpriteRenderer sunOneSprite;
+    private SpriteRenderer sunTwoSprite;
+    private SpriteRenderer sunThreeSprite;
+    [SerializeField] private Sprite moon;
 
     public void Awake()
     {
+        light = lightObject.GetComponent<Light2D>();
         _collider = GetComponent<Collider2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _ob = GetComponent<ObjectInteract>();
-        if(isHouse)
+        if (isHouse)
+        {
             ameliaCollider = amelia.GetComponent<BoxCollider2D>();
+            sunOneSprite = sunOne.GetComponent<SpriteRenderer>();
+            sunTwoSprite = sunTwo.GetComponent<SpriteRenderer>();
+            sunThreeSprite = sunThree.GetComponent<SpriteRenderer>();
+        }
     }
 
     public void Start()
@@ -111,6 +128,26 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     public void DisappearObject(float duration)
     {
         StartCoroutine(FadeOutAndDisableCollider(duration));
+        if (isHouse)
+            StartCoroutine(Night(duration));
+    }
+
+
+    private IEnumerator Night(float duration)
+    {
+        Color start = light.color;
+        Color target = new Color32(4, 4, 4, 255);
+        float elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            light.color = Color.Lerp(start, target, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        light.color = target;
+        sunOneSprite.sprite = moon;
+        sunTwoSprite.sprite = moon;
+        sunThreeSprite.sprite = moon;
     }
 
     private IEnumerator FadeOutAndDisableCollider(float duration)

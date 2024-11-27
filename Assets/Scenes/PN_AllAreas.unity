@@ -372,6 +372,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0adf78c2776cbae499a4616aaad494d7, type: 3}
+--- !u!1 &466466990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8620709608541924965, guid: 0adf78c2776cbae499a4616aaad494d7, type: 3}
+  m_PrefabInstance: {fileID: 447558705}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &466743475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5453896510291293478, guid: 203611d729300f6449b9befa76e42ebb, type: 3}
@@ -936,6 +941,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1606898016}
+    - target: {fileID: 6294979935390905126, guid: 04dd49d08bf874342abcfa8d6580ce53, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.95855325
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294979935390905126, guid: 04dd49d08bf874342abcfa8d6580ce53, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0254
+      objectReference: {fileID: 0}
     - target: {fileID: 8317409902432928827, guid: 04dd49d08bf874342abcfa8d6580ce53, type: 3}
       propertyPath: m_Name
       value: The Inn
@@ -1487,6 +1500,11 @@ MeshRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 10
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1013480876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3436080029138441851, guid: 9bd0d6f4d59d6814b9f9231aab7131d3, type: 3}
+  m_PrefabInstance: {fileID: 208276421419932459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1016429260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,14 +1729,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4099404281727081831, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099404281727081831, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1083394711
+      objectReference: {fileID: 0}
     - target: {fileID: 6713190930917033033, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 571594158}
     - target: {fileID: 6800157038979789635, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
+      propertyPath: moon
+      value: 
+      objectReference: {fileID: 21300000, guid: e6f297de0ffa7fb4499b8e1d9efd27d0, type: 3}
+    - target: {fileID: 6800157038979789635, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
       propertyPath: amelia
       value: 
       objectReference: {fileID: 231874428}
+    - target: {fileID: 6800157038979789635, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
+      propertyPath: sunOne
+      value: 
+      objectReference: {fileID: 466466990}
+    - target: {fileID: 6800157038979789635, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
+      propertyPath: sunTwo
+      value: 
+      objectReference: {fileID: 1013480876}
+    - target: {fileID: 6800157038979789635, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
+      propertyPath: sunThree
+      value: 
+      objectReference: {fileID: 1724916033}
+    - target: {fileID: 6800157038979789635, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
+      propertyPath: lightObject
+      value: 
+      objectReference: {fileID: 1226698379}
     - target: {fileID: 8317409902432928827, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
       propertyPath: m_Name
       value: The Forest
@@ -1786,9 +1832,29 @@ PrefabInstance:
       value: Tree
       objectReference: {fileID: 0}
     - target: {fileID: 9060331471478265841, guid: bb45ef3fa9a16954bb8f5a4ddd74eb32, type: 3}
+      propertyPath: moon
+      value: 
+      objectReference: {fileID: 21300000, guid: e6f297de0ffa7fb4499b8e1d9efd27d0, type: 3}
+    - target: {fileID: 9060331471478265841, guid: bb45ef3fa9a16954bb8f5a4ddd74eb32, type: 3}
       propertyPath: amelia
       value: 
       objectReference: {fileID: 231874428}
+    - target: {fileID: 9060331471478265841, guid: bb45ef3fa9a16954bb8f5a4ddd74eb32, type: 3}
+      propertyPath: sunOne
+      value: 
+      objectReference: {fileID: 466466990}
+    - target: {fileID: 9060331471478265841, guid: bb45ef3fa9a16954bb8f5a4ddd74eb32, type: 3}
+      propertyPath: sunTwo
+      value: 
+      objectReference: {fileID: 1013480876}
+    - target: {fileID: 9060331471478265841, guid: bb45ef3fa9a16954bb8f5a4ddd74eb32, type: 3}
+      propertyPath: sunThree
+      value: 
+      objectReference: {fileID: 1724916033}
+    - target: {fileID: 9060331471478265841, guid: bb45ef3fa9a16954bb8f5a4ddd74eb32, type: 3}
+      propertyPath: lightObject
+      value: 
+      objectReference: {fileID: 1226698379}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1803,6 +1869,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8753769680141267387, guid: a78cbfca77234d343b8176de48702df1, type: 3}
   m_PrefabInstance: {fileID: 1056778451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1724916033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5159596797410005387, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
+  m_PrefabInstance: {fileID: 1333883575}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1806053026
 GameObject:

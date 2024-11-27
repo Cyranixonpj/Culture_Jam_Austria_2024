@@ -49,7 +49,7 @@ public class FriedaBarEnd : MonoBehaviour
         Destroy(snowOne);
         Destroy(snowTwo);
         Destroy(snowThree);
-        light.color = new Color32(4,4,4,255);
+        //light.color = new Color32(4,4,4,255);
         player.transform.position = new Vector3(3f, -17.36f, 0f);
         player.transform.localScale = new Vector3(2f, 2f, 0);
         camera.transform.position = new Vector3(0, -16.616f, -10f);
