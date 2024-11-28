@@ -29,6 +29,10 @@ public class FriedaBarEnd : MonoBehaviour
     private SpriteRenderer sunTwoSprite;
     private SpriteRenderer sunThreeSprite;
     [SerializeField] private Sprite moon;
+    [SerializeField] private SpriteRenderer townBackground;
+    [SerializeField] private SpriteRenderer forestBackground;
+    [SerializeField] private SpriteRenderer crossroadsBackground;
+    [SerializeField] private Sprite nightBackground;
 
     public void Start()
     {
@@ -61,6 +65,9 @@ public class FriedaBarEnd : MonoBehaviour
         sunOneSprite.sprite = moon;
         sunTwoSprite.sprite = moon;
         sunThreeSprite.sprite = moon;
+        townBackground.sprite = nightBackground;
+        forestBackground.sprite = nightBackground;
+        crossroadsBackground.sprite = nightBackground;
         light.color = new Color32(4,4,4,255);
         player.transform.position = new Vector3(3f, -17.36f, 0f);
         player.transform.localScale = new Vector3(2f, 2f, 0);
