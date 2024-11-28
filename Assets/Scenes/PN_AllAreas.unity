@@ -650,6 +650,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4621142727163845492, guid: 203611d729300f6449b9befa76e42ebb, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621142727163845492, guid: 203611d729300f6449b9befa76e42ebb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5453896510291293478, guid: 203611d729300f6449b9befa76e42ebb, type: 3}
       propertyPath: m_Name
       value: Amalia (1)
@@ -660,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8712370329379719058, guid: 203611d729300f6449b9befa76e42ebb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.55
+      value: -0.77
       objectReference: {fileID: 0}
     - target: {fileID: 8712370329379719058, guid: 203611d729300f6449b9befa76e42ebb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1060,7 +1068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8712370329379719058, guid: 203611d729300f6449b9befa76e42ebb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.686
+      value: 14.4
       objectReference: {fileID: 0}
     - target: {fileID: 8712370329379719058, guid: 203611d729300f6449b9befa76e42ebb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2316,6 +2324,14 @@ PrefabInstance:
     - target: {fileID: 1199413841143547225, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393889439632204578, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393889439632204578, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0095
       objectReference: {fileID: 0}
     - target: {fileID: 4061968126932139682, guid: 7d93fdc76a9341e4dbd51fba3088f880, type: 3}
       propertyPath: m_text

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TheVillage
   m_EditorClassIdentifier: 
   AreaID: 1
-  CameraPosition: {x: 0, y: 0, z: -10}
+  CameraPosition: {x: 0, y: 0.05, z: -10}
   PlayerNorthSpawnPos: {x: 0, y: 0.8, z: 0}
   PlayerEastSpawnPos: {x: 9.7, y: -1.49, z: 0}
   PlayerSouthSpawnPos: {x: -5.9, y: -0.57, z: 0}
