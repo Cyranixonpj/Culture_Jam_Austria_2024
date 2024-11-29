@@ -15,10 +15,17 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
-        _mainView.SetActive(true);
-        _creditsView.SetActive(false);
+        if (PlayerPrefs.GetInt("ShowCredits",0) == 1)
+        {
+            ShowCreditsImmediately();
+        }
+        else
+        {
+            _mainView.SetActive(true);
+            _creditsView.SetActive(false);
+        }
     }
-
+    
     private void Update()
     {
         if (Input.anyKeyDown && _isCreditsScene)
@@ -26,13 +33,52 @@ public class MenuManager : MonoBehaviour
             QuitToMainMenu();
         }
     }
+    private void ShowCreditsImmediately()
+    {
+        PlayerPrefs.SetInt("ShowCredits", 0); // Reset, żeby za każdym razem nie pokazywało
+        _mainView.SetActive(false);
+        _creditsView.SetActive(true);
+        _isCreditsScene = true;
+    }
+    
 
     #region mainView
 
     public void StartClicked()
     {
         _mainView.SetActive(false);
-        SceneManager.LoadScene("PN_AllAreas");
+        
+        // SceneManager.LoadSceneAsync("PN_AllAreas");
+        StartCoroutine(LoadSceneWithLoadingScreen("PN_AllAreas"));
+    }
+    
+    private IEnumerator LoadSceneWithLoadingScreen(string sceneName)
+    {
+        // Załaduj ekran ładowania
+        AsyncOperation loadLoadingScreen = SceneManager.LoadSceneAsync("LoadingScreen", LoadSceneMode.Additive);
+        loadLoadingScreen.allowSceneActivation = true;  // Od razu aktywuj scenę
+
+        // Czekaj, aż scena ładowania zostanie w pełni załadowana
+        while (!loadLoadingScreen.isDone)
+        {
+            yield return null;
+        }
+
+        // Załaduj główną scenę asynchronicznie w tle
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
+        asyncOperation.allowSceneActivation = false;
+
+        // Poczekaj, aż scena się załaduje (do 90%)
+        while (asyncOperation.progress < 0.9f)
+        {
+            yield return null;
+        }
+
+        // Dopiero po załadowaniu 90% sceny, aktywuj ją
+        asyncOperation.allowSceneActivation = true;
+
+        // Usuń ekran ładowania
+        SceneManager.UnloadSceneAsync("LoadingScreen");
     }
 
     public void ExitClicked()

@@ -2,19 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using UnityEngine.Video;
 
 public class newscip : MonoBehaviour
 {
+    
     [SerializeField] GameObject _player;
     [SerializeField] GameObject _video;
     [SerializeField] private GameObject text;
     [SerializeField] private AudioSource audio;
     private VideoPlayer _vp;
+    
+    
     private void Awake()
     {
+
         _video.SetActive(false);
         _vp = _video.GetComponentInChildren<VideoPlayer>();
     }
@@ -41,8 +46,9 @@ public class newscip : MonoBehaviour
     {
         yield return StartCoroutine(FadeInText(text, 1f));
         yield return StartCoroutine(FadeOutText(text, .5f));
+        
+        PlayerPrefs.SetInt("ShowCredits", 1);
         SceneManager.LoadScene(0);
-
     }
     private IEnumerator FadeInText(GameObject gameObject, float duration)
     {

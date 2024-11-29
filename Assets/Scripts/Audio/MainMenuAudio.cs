@@ -19,22 +19,8 @@ public class MainMenuAudio : MonoBehaviour
         {
             Load();
         }
-        UpdateButtonIcon();
+        
         AudioListener.pause = muted;
-    }
-
-    private void UpdateButtonIcon()
-    {
-        if (muted==false)
-        {
-            audioOnButton.enabled = true;
-            audioOffButton.enabled = false;
-        }
-        else
-        {
-            audioOnButton.enabled = false;
-            audioOffButton.enabled = true;
-        }
     }
 
     public void OnButtonPress()
