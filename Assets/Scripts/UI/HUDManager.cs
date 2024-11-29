@@ -7,10 +7,12 @@ public class HUDManager : MonoBehaviour
 {
     [SerializeField] private GameObject _pauseView;
     [SerializeField] private GameObject _player;
+    [SerializeField] private AudioSource _button;
     
     private bool _isPause;
     void Awake()
     {
+        _button.Stop();
         _pauseView.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -61,6 +63,16 @@ public class HUDManager : MonoBehaviour
     public void ExitToMenu()
     {
         Time.timeScale = 1f;
+        // SceneManager.LoadScene("MainMenu");
+        StartCoroutine(QuitToMainMenuDelay());
+    }
+
+
+    private IEnumerator QuitToMainMenuDelay()
+    {
+        _button.Play();
+
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("MainMenu");
     }
 }

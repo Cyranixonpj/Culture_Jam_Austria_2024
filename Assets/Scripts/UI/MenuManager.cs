@@ -9,15 +9,16 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject _mainView;
     [SerializeField] private GameObject _creditsView;
-    [SerializeField] private AudioListener _audioListener;
+    [SerializeField] private AudioSource _buttonSound;
     private bool _isCreditsScene;
 
 
     private void Awake()
     {
+        _buttonSound.Stop();
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        if (PlayerPrefs.GetInt("ShowCredits",0) == 1)
+        if (PlayerPrefs.GetInt("ShowCredits", 0) == 1)
         {
             ShowCreditsImmediately();
         }
@@ -27,7 +28,7 @@ public class MenuManager : MonoBehaviour
             _creditsView.SetActive(false);
         }
     }
-    
+
     private void Update()
     {
         if (Input.anyKeyDown && _isCreditsScene)
@@ -35,6 +36,7 @@ public class MenuManager : MonoBehaviour
             QuitToMainMenu();
         }
     }
+
     private void ShowCreditsImmediately()
     {
         PlayerPrefs.SetInt("ShowCredits", 0); // Reset, żeby za każdym razem nie pokazywało
@@ -42,21 +44,22 @@ public class MenuManager : MonoBehaviour
         _creditsView.SetActive(true);
         _isCreditsScene = true;
     }
+
     #region mainView
 
     public void StartClicked()
     {
         _mainView.SetActive(false);
-        
+
         // SceneManager.LoadSceneAsync("PN_AllAreas");
         StartCoroutine(LoadSceneWithLoadingScreen("PN_AllAreas"));
     }
-    
+
     private IEnumerator LoadSceneWithLoadingScreen(string sceneName)
     {
         // Załaduj ekran ładowania
         AsyncOperation loadLoadingScreen = SceneManager.LoadSceneAsync("LoadingScreen", LoadSceneMode.Additive);
-        loadLoadingScreen.allowSceneActivation = true;  // Od razu aktywuj scenę
+        loadLoadingScreen.allowSceneActivation = true; // Od razu aktywuj scenę
 
         // Czekaj, aż scena ładowania zostanie w pełni załadowana
         while (!loadLoadingScreen.isDone)
@@ -83,16 +86,25 @@ public class MenuManager : MonoBehaviour
 
     public void ExitClicked()
     {
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-#else
-            Application.Quit();
-#endif
+        StartCoroutine(QuitWithDelay());
     }
+
+    private IEnumerator QuitWithDelay()
+    {
+        _buttonSound.Play();
+        yield return new WaitForSeconds(0.5f);
+        #if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+        
+        #else
+        Application.Quit();
+        #endif
+        
+    }
+
 
     public void MuteClicked()
     {
-        
     }
 
     public void CreditsClicked()
