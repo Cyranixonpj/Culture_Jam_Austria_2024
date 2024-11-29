@@ -48,11 +48,7 @@ public class PlayerMovement : MonoBehaviour
         speedY = Input.GetAxisRaw("Vertical") * movSpeed;
         _rb.velocity = new Vector2(speedX, speedY);
 
-        Debug.Log($"speedX: {speedX}, speedY: {speedY}");
-
-        walking = speedX != 0 || speedY != 0;
-
-        if (walking)
+        if (walking == true)
         {
             _audioManager.StartWalk();
         }
@@ -60,33 +56,32 @@ public class PlayerMovement : MonoBehaviour
         {
             _audioManager.StopWalk();
         }
-
         UpdateAnimations();
     }
-
     void UpdateAnimations()
     {
-        Debug.Log($"speedX: {speedX}, speedY: {speedY}, walking: {walking}");
-
-        if (speedX != 0 || speedY != 0) // Zmiana tylko jeśli poruszamy się
+        walking = true;
+        if (speedX != 0)
         {
-            walking = true;
             _animator.SetBool("MDown", false);
             _animator.SetBool("MUp", false);
-            _animator.SetBool("MRight", false); // Resetuj przed ustawieniem nowych animacji
-
-            if (speedX != 0)
+            _animator.SetBool("MRight", true);
+            
+            FlipSprite(speedX < 0);
+        }
+        else if (speedY != 0)
+        {
+            if (speedY > 0)
             {
-                _animator.SetBool("MRight", true);
-                FlipSprite(speedX < 0);
-            }
-            else if (speedY > 0)
-            {
+                _animator.SetBool("MDown", false);
                 _animator.SetBool("MUp", true);
+                _animator.SetBool("MRight", false);
             }
-            else if (speedY < 0)
+            else
             {
                 _animator.SetBool("MDown", true);
+                _animator.SetBool("MUp", false);
+                _animator.SetBool("MRight", false);
             }
         }
         else
@@ -100,12 +95,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FlipSprite(bool flip)
     {
-        if (_isFacingRight != !flip)
-        {
-            _isFacingRight = !_isFacingRight;
-            Vector3 theScale = _spriteRenderer.transform.localScale;
-            theScale.x *= -1;
-            _spriteRenderer.transform.localScale = theScale;
-        }
+        _spriteRenderer.flipX = flip;
     }
 }
