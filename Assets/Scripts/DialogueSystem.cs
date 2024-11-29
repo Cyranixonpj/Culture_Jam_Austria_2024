@@ -73,6 +73,10 @@ public class DialogueSystem : MonoBehaviour
         dialogueActive = true;
         _pl.GetComponent<Rigidbody2D>().velocity = Vector2.zero; 
         _pl.enabled = false;
+        _pl.GetComponent<Animator>().SetBool("MDown", false);
+        _pl.GetComponent<Animator>().SetBool("MUp", false);
+        _pl.GetComponent<Animator>().SetBool("MRight", false);
+        _pl.MuteWalkSound(true);
         lines = newLines;
         index = 0;
         gameObject.SetActive(true);
@@ -114,6 +118,10 @@ public class DialogueSystem : MonoBehaviour
             }
             dialogueActive = false;
             _pl.enabled = true;
+            _pl.GetComponent<Animator>().SetBool("MDown", false);
+            _pl.GetComponent<Animator>().SetBool("MUp", false);
+            _pl.GetComponent<Animator>().SetBool("MRight", false);
+            _pl.MuteWalkSound(true);
             dialogueText.text = string.Empty;
             lines = new string[0]; 
             gameObject.SetActive(false);

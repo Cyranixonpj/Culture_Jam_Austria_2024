@@ -31,6 +31,17 @@ public class PlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
         _rb.freezeRotation = true;
     }
+    public void MuteWalkSound(bool mute)
+    {
+        if (mute)
+        {
+            _audioManager.StopWalk();
+        }
+        else if (walking)
+        {
+            _audioManager.StartWalk();
+        }
+    }
     void Update()
     {
         speedX = Input.GetAxisRaw("Horizontal") * movSpeed;
