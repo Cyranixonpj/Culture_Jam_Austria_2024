@@ -82,9 +82,9 @@ public class DialogueSystem : MonoBehaviour
         gameObject.SetActive(true);
         dialogueText.text = string.Empty;
         StartCoroutine(TypeLine());
-        if (lines[lines.Length-1] == "Come to my room in a few hours.")
+        if (lines[lines.Length-1] == "Frieda: Come to my room in a few hours.")
             _itsFrieda = true;
-        if (lines[lines.Length - 1] == "If you help me, I might get you this precious permit out of his pocket. Do we have a deal?")
+        if (lines[lines.Length - 1] == "Frieda: If you help me, I might get you this precious permit out of his pocket. Do we have a deal?")
             _itsEnd = true;
     }
 

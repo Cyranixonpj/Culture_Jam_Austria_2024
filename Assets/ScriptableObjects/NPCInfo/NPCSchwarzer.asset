@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCId: 0
   lines:
-  - "Another visitor, I see\u2026 Good sir, I must inform you that this village belongs
-    to the Castle, so anyone who stays here is, so to speak, staying at the castle. "
-  - "And no one\u2019s allowed to do that without a permit from the count. However,
-    you don\u2019t have any such permit, or at least you haven\u2019t shown one."
-  - "Are you a land surveyor? Honestly, I don\u2019t remember the Castle hiring people
-    of your profession."
-  - "There can\u2019t have been a mistake. Well, anyway, you cannot enter without
-    a permit. And I am afraid it\u2019s impossible to get one now\u2026 or ever,
-    actually. Sorry to disappoint."
+  - "Schwarzer: Another visitor, I see\u2026 Good sir, I must inform you that this
+    village belongs to the Castle, so anyone who stays here is, so to speak, staying
+    at the castle. "
+  - "Schwarzer: And no one\u2019s allowed to do that without a permit from the count.
+    However, you don\u2019t have any such permit, or at least you haven\u2019t shown
+    one."
+  - "Schwarzer: Are you a land surveyor? Honestly, I don\u2019t remember the Castle
+    hiring people of your profession."
+  - "Schwarzer: There can\u2019t have been a mistake. Well, anyway, you cannot enter
+    without a permit. And I am afraid it\u2019s impossible to get one now\u2026 or
+    ever, actually. Sorry to disappoint."
   GivenWord: {fileID: 0}

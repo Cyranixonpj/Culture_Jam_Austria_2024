@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCId: 0
   lines:
-  - "Hello, mister. People don\u2019t visit our village very often. You must be here
-    for some important reason, am I right? "
-  - "Of course, I am. Well, the passage to the Castle is closed, and it won\u2019t
+  - "Amalia: Hello, mister. People don\u2019t visit our village very often. You must
+    be here for some important reason, am I right? "
+  - "Amalia: Of course, I am. Well, the passage to the Castle is closed, and it won\u2019t
     open any time soon. "
-  - "So why don\u2019t you help me get rid of this tree over there? It was a perfectly
-    <i>clear</i> road yesterday.\u201D"
+  - "Amalia: So why don\u2019t you help me get rid of this tree over there? It was
+    a perfectly <i>clear</i> road yesterday.\u201D"
   GivenWord: {fileID: 11400000, guid: 4d001388aef48514f9a629cf3edf3d65, type: 2}

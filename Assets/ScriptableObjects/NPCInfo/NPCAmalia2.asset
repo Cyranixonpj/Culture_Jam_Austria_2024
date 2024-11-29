@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCId: 0
   lines:
-  - "I didn't expect you to stay here for so long, mister Clerk. What brought you
-    here so late at night? Still sniffing around and trying to break into the Castle,
-    aren\u2019t you? "
-  - "Fine, I\u2019ll tell you how to get in. I actually would love to see this place
-    going mad with your presence, mr. Clerk."
-  - "So listen closely\u2026 There is <i>a secret path</i> through the crack in the
-    wall to the east from the gates. The path is narrow, but you should be able to
-    go through."
+  - "Amalia: I didn't expect you to stay here for so long, mister Clerk. What brought
+    you here so late at night? Still sniffing around and trying to break into the
+    Castle, aren\u2019t you? "
+  - "Amalia: Fine, I\u2019ll tell you how to get in. I actually would love to see
+    this place going mad with your presence, mr. Clerk."
+  - "Amalia: So listen closely\u2026 There is <i>a secret path</i> through the crack
+    in the wall to the east from the gates. The path is narrow, but you should be
+    able to go through."
   GivenWord: {fileID: 11400000, guid: 9019ac1af1a54254cba2cbfa64ba460e, type: 2}

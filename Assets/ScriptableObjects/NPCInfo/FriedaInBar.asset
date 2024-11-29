@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCId: 123
   lines:
-  - 'Hm? Oh, a new face I see. You must be hired by The Castle, right? '
-  - No one appears there if they weren't hired.
-  - Castle employees drink here for free, so let me pour one out for you.
-  - By the way, where is your permit? I always wanted to see one of those...
-  - "Oh, you don\u2019t have it. Liar\u2026 But we could help each other. "
-  - Come to my room in a few hours.
+  - 'Frieda: Hm? Oh, a new face I see. You must be hired by The Castle, right? '
+  - 'Frieda: No one appears there if they weren''t hired.'
+  - 'Frieda: Castle employees drink here for free, so let me pour one out for you.'
+  - 'Frieda: By the way, where is your permit? I always wanted to see one of those...'
+  - "Frieda: Oh, you don\u2019t have it. Liar\u2026 But we could help each other. "
+  - 'Frieda: Come to my room in a few hours.'
   GivenWord: {fileID: 0}
