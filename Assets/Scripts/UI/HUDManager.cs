@@ -12,6 +12,8 @@ public class HUDManager : MonoBehaviour
     void Awake()
     {
         _pauseView.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()
     {
@@ -34,6 +36,8 @@ public class HUDManager : MonoBehaviour
         _pauseView.SetActive(true);
         Time.timeScale = 0f;
         _isPause = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         
         _player.GetComponent<PlayerMovement>().enabled = false;
         
@@ -44,6 +48,8 @@ public class HUDManager : MonoBehaviour
         _pauseView.SetActive(false);
         Time.timeScale = 1f;
         _isPause = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         _player.GetComponent<PlayerMovement>().enabled = true;
     }
 
