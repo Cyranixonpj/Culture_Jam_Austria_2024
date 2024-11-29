@@ -15,6 +15,8 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         if (PlayerPrefs.GetInt("ShowCredits",0) == 1)
         {
             ShowCreditsImmediately();
@@ -40,8 +42,6 @@ public class MenuManager : MonoBehaviour
         _creditsView.SetActive(true);
         _isCreditsScene = true;
     }
-    
-
     #region mainView
 
     public void StartClicked()
@@ -105,6 +105,8 @@ public class MenuManager : MonoBehaviour
     public void QuitToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         _isCreditsScene = false;
     }
 
